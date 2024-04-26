@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/sharnbasva"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/sharnbasva"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SUKAppUsers"
+        tools:targetApi="31">
+        <activity
+            android:name=".UserSection.DeveloperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KnowAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserLoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FullScreenVideoActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".UserSection.UserOfficialSiteActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.sukappusers.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".UserSection.UserStudyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.ChangeEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserFacultiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserEditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserOldqpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserDocumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserCheckStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserPassingCriteria"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.UserAcademicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSection.FullScreenImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SUKAppUsers.NoActionBar" />
+    </application>
+
+</manifest>

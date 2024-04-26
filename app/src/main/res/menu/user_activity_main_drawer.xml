@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_notify"
+            android:icon="@drawable/bell"
+            android:title="Notification"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@drawable/newspaper"
+            android:title="Notice" />
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/need_help"
+            android:title="Need Help" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Sharing">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/share"
+                    android:title="Share" />
+
+                <item
+                    android:id="@+id/nav_rate"
+                    android:icon="@drawable/rate_us"
+                    android:title="Rate Us" />
+
+            </menu>
+        </item>
+
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/disconnect">
+
+            <menu>rate_us.xml
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_"
+                    android:title="Logout" />
+            </menu>
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/other">
+
+            <menu>
+                <item android:title="Version 1.0" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

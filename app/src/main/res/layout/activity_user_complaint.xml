@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSection.UserComplaintActivity">
+
+    <include layout="@layout/custom_toolbar" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/reference_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_margin="@dimen/fab_margin"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:backgroundTint="@color/white"
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck,VisualLintOverlap,VisualLintButtonSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/reference_number_text"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    tools:ignore="UselessParent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/subjectTextInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Subject"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/subjectEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapWords"
+                            android:maxLength="24"
+                            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/subjectDescTextInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Complaint Description"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/subjectDescEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:maxLength="300"
+                            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/SaveButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/text_shape"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="Submit"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/Complaint_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:text="@string/complaint_text"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+</RelativeLayout>
+

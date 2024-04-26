@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/wave_nav"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:contentDescription="@string/logo"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sharnbasva"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sharnbasva_university_kalaburagi"
+        android:maxLines="3"
+        android:maxLength="35"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department_of_mca"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+</LinearLayout>

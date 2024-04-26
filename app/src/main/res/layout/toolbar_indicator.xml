@@ -1,0 +1,9 @@
+<com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/toolbarProgressBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:indeterminate="true"
+    android:max="100"
+    android:visibility="invisible"
+    app:trackCornerRadius="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

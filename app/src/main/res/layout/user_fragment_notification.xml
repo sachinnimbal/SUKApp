@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSection.UserNotificationFragment">
+
+    <include layout="@layout/toolbar_indicator" />
+
+    <LinearLayout
+        android:id="@+id/recycler_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notification_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/notification_item"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/noDataAnimationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:lottie_autoPlay="true"
+            app:lottie_cacheComposition="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/no_data_loader"
+            app:lottie_speed="1" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/progress_bar" />
+
+    <include layout="@layout/back_to_top" />
+
+</RelativeLayout>

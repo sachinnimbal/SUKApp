@@ -1,0 +1,11 @@
+<ImageView android:id="@+id/backToTopImageView"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_alignParentEnd="false"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="@dimen/fab_margin"
+    android:src="@drawable/top_icon"
+    android:contentDescription="TODO"
+    android:visibility="invisible"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

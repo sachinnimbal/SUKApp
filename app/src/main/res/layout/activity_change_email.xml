@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserSection.ChangeEmailActivity">
+
+    <include layout="@layout/custom_toolbar" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/toolbar"
+        app:cardCornerRadius="8dp"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="Current Email Address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/current_email_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_lock"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="New Email Address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/new_email_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_lock"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/changeEmailBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_shape"
+                android:elevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Change Email Address"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

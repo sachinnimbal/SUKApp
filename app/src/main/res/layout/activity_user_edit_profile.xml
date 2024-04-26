@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSection.UserEditProfileActivity">
+
+    <include layout="@layout/custom_toolbar" />
+
+    <include
+        layout="@layout/toolbar_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarProgressBar"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_view"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/magenta"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/usn_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/choose_image_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usn_view"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="5dp"
+                android:text="Choose Image"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/image_select"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@id/choose_image_button"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:id="@+id/profile_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            tools:ignore="VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/batchOptionSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/spinner_bg"
+                        android:padding="10dp"
+                        android:prompt="@string/default_spinner_text"
+                        android:textAlignment="textStart"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_phone_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_phone_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            tools:ignore="VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/edit_parent_details_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parent/Guardian Details"
+                        android:textAlignment="center"
+                        android:textColor="@color/magenta"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/father_name_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Father's Name"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/parentNameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            tools:ignore="VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/father_phone_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Father's Phone"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/parentPhoneEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            tools:ignore="VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/address_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:maxLength="120"
+                            tools:ignore="VisualLintTextFieldSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/update_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Update Profile"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

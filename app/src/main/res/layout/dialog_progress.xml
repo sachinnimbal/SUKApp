@@ -1,0 +1,36 @@
+<!-- dialog_progress.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Include the progress_bar layout -->
+    <include layout="@layout/progress_bar" />
+    <!-- Add any other views you want in the dialog, if needed -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="10dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logged in on Another Device"
+            android:textStyle="bold" />
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/dialogMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have been logged out because you logged in on another device." />
+
+    </LinearLayout>
+
+</LinearLayout>

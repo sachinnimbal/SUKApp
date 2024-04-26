@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:elevation="8dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/open_Sheet"
+            android:layout_width="55dp"
+            android:layout_height="3dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/remove_top" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="3dp"
+            android:visibility="invisible"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_cacheComposition="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_internet"
+        app:lottie_speed="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="You're offline"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Please check your connection or try again later."
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/btn_fight_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/rounded_corner"
+            android:drawablePadding="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Enable Connection"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_data_off"
+            app:drawableTint="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSection.UserCheckStatusActivity">
+
+    <include layout="@layout/custom_toolbar" />
+
+    <include
+        android:layout_below="@+id/toolbar"
+        layout="@layout/toolbar_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarProgressBar"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:elevation="2dp"
+        android:background="@drawable/text_shape"
+        android:backgroundTint="@color/white"
+        android:iconifiedByDefault="true"
+        android:queryBackground="@android:color/white"
+        android:searchIcon="@drawable/ic_search"
+        android:submitBackground="@android:color/white"
+        android:theme="@style/Widget.AppCompat.SearchView"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/ic_search"
+        app:submitBackground="@android:color/white"
+        app:useDrawerArrowDrawable="true" />
+
+    <TextView
+        android:id="@+id/noDataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Complaint not registered yet\n on this reference number."
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchView"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <include layout="@layout/progress_bar" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statusTextView"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:id="@+id/complaint_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/referenceNumberTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/border_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bisque" />
+
+                    <TextView
+                        android:id="@+id/name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/usn_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/batch_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bisque" />
+
+                    <TextView
+                        android:id="@+id/subjectTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/descriptionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start|top"
+                        android:letterSpacing="0.08"
+                        android:maxLength="55"
+                        android:maxLines="1"
+                        android:padding="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/responseTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start|top"
+                        android:letterSpacing="0.08"
+                        android:maxLength="55"
+                        android:maxLines="1"
+                        android:padding="3dp"
+                        android:textColor="@color/magenta"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/dateTime_layout"
+                    android:background="@color/bisque" />
+
+                <RelativeLayout
+                    android:id="@+id/dateTime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/complaint_layout"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/datetimeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="false"
+                        android:layout_marginStart="2dp"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@android:color/darker_gray"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageView
+                        android:id="@+id/view_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="More.."
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/eye"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/border"
+                    android:padding="3dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/updatedTimeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="2dp"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@android:color/holo_green_dark"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/updatedDateTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="2dp"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/helpCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/help_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Click the 'Add New' button to raise your complaint regarding college, the app, or any other issue. You can raise your concerns without any worries &amp; also you can check your complaint status by simply searching in the search bar with the reference number. Please copy &amp; paste the reference number somewhere for future use."
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/add_new"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/magenta"
+        app:icon="@drawable/add"
+        app:iconTint="@color/white"
+        tools:ignore="TextContrastCheck" />
+
+</RelativeLayout>
