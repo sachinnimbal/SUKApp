@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "970463574921",
-    "firebase_url": "https://suk-app-project-default-rtdb.firebaseio.com",
-    "project_id": "suk-app-project",
-    "storage_bucket": "suk-app-project.appspot.com"
+    "project_number": "",
+    "firebase_url": ""
+    "project_id": "",
+    "storage_bucket": ""
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:970463574921:android:ac77c8422b241330a63f58",
+        "mobilesdk_app_id": "",
         "android_client_info": {
-          "package_name": "com.example.collegeapp"
+          "package_name": ""
         }
       },
       "oauth_client": [
         {
-          "client_id": "970463574921-4c3ph2tgjhaa885ji25mm0bij40sdp6e.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.collegeapp",
-            "certificate_hash": "28fcde71a7b9542a4d3f6aa9c8b83b8330b92313"
+            "certificate_hash": ""
           }
         },
         {
-          "client_id": "970463574921-d4v9f2bt9d3aepnr2qo9qj4hmjnr8rqp.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "",
+          "client_type": 
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPMqHvYl4KhnuYy5nrIGFSJxkN0Rn5J50"
+          "current_key": ""
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "970463574921-d4v9f2bt9d3aepnr2qo9qj4hmjnr8rqp.apps.googleusercontent.com",
+              "client_id": "",
               "client_type": 3
             }
           ]
@@ -45,28 +45,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:970463574921:android:b5ad4de19820c504a63f58",
+        "mobilesdk_app_id": "",
         "android_client_info": {
-          "package_name": "com.example.sukappadmin"
+          "package_name": ""
         }
       },
       "oauth_client": [
         {
-          "client_id": "970463574921-d4v9f2bt9d3aepnr2qo9qj4hmjnr8rqp.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPMqHvYl4KhnuYy5nrIGFSJxkN0Rn5J50"
+          "current_key": ""
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "970463574921-d4v9f2bt9d3aepnr2qo9qj4hmjnr8rqp.apps.googleusercontent.com",
-              "client_type": 3
+              "client_id": "",
+              "client_type": 
             }
           ]
         }
@@ -74,28 +74,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:970463574921:android:a240021e7dcf1ccaa63f58",
+        "mobilesdk_app_id": "",
         "android_client_info": {
-          "package_name": "com.example.sukappusers"
+          "package_name": ""
         }
       },
       "oauth_client": [
         {
-          "client_id": "970463574921-d4v9f2bt9d3aepnr2qo9qj4hmjnr8rqp.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPMqHvYl4KhnuYy5nrIGFSJxkN0Rn5J50"
+          "current_key": ""
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "970463574921-d4v9f2bt9d3aepnr2qo9qj4hmjnr8rqp.apps.googleusercontent.com",
-              "client_type": 3
+              "client_id": "",
+              "client_type": 
             }
           ]
         }
